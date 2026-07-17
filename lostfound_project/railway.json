@@ -2,7 +2,10 @@
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "sh mvnw -B package -DskipTests"
+    "buildCommand": "sh mvnw -B package -DskipTests",
+    "variables": {
+      "RAILPACK_JDK_VERSION": "21"
+    }
   },
   "deploy": {
     "startCommand": "java -jar target/lostfound-0.0.1-SNAPSHOT.jar",
